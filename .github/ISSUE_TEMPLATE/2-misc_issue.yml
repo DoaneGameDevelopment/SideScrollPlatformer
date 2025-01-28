@@ -1,0 +1,14 @@
+name: Blank Issue
+description: A blank issue for everything else.
+body:
+  - type: textarea
+    id: body
+    attributes:
+      label: Description
+      placeholder: Describe in detail what you want changed...
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Thank you and have a good day!
