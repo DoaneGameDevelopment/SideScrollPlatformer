@@ -16,7 +16,7 @@ body:
     validations:
       required: true
 
-    type: textarea
+  - type: textarea
     id: additional-bug
     attributes:
       label: Additional Information?
