@@ -3,7 +3,7 @@ description: Create a task.
 title: "[Task]: "
 type: ["task"]
 body:
-    type: textarea
+  - type: textarea
     id: todo-task
     attributes:
       label: Todo
