@@ -17,7 +17,7 @@ body:
       required: true
 
     type: textarea
-    id: additional
+    id: additional-bug
     attributes:
       label: Additional Information?
       description: Write any additional information if applicable.

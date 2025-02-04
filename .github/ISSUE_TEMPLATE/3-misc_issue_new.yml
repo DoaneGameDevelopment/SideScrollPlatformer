@@ -2,7 +2,7 @@ name: Blank Issue
 description: A blank issue for everything else.
 body:
   - type: textarea
-    id: body
+    id: body-blank
     attributes:
       label: Description
       placeholder: Describe in detail what you want changed...

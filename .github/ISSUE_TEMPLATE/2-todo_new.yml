@@ -4,7 +4,7 @@ title: "[Task]: "
 type: ["task"]
 body:
     type: textarea
-    id: todo
+    id: todo-task
     attributes:
       label: Todo
       description: A checklist of things to do
@@ -17,7 +17,7 @@ body:
       required: true
 
     type: textarea
-    id: desc
+    id: desc-task
     attributes:
       label: Expectations
       description: What do you expect for the final result?
