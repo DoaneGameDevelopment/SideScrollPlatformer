@@ -1,0 +1,25 @@
+name: Task
+description: Create a task.
+title: "[Task]: "
+type: ["task"]
+body:
+    type: textarea
+    id: todo
+    attributes:
+      label: Todo
+      description: A checklist of things to do
+      placeholder: |
+        - [ ] Item 1
+        - [ ] Item 2
+        - [ ] Item 3
+        - [ ] Item 4
+    validations:
+      required: true
+
+    type: textarea
+    id: desc
+    attributes:
+      label: Expectations
+      description: What do you expect for the final result?
+    validations:
+      required: true
