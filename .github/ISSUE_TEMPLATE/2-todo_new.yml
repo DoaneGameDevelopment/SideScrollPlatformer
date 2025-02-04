@@ -1,7 +1,7 @@
 name: Task
 description: Create a task.
 title: "[Task]: "
-type: ["task"]
+type: "task"
 body:
   - type: textarea
     id: todo-task
