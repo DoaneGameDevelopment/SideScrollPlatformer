@@ -27,7 +27,7 @@ body:
     id: assignee
     attributes:
       label: Assigned to...
-      description: @mention a person or team
+      description: "@mention a person or team"
       placeholder: "@user"
     validations:
       required: true
