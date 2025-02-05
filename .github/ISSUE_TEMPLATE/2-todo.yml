@@ -1,6 +1,7 @@
 name: Task
 description: Create a task.
 title: "[Task]: "
+labels: ["task"]
 type: "task"
 body:
   - type: textarea
@@ -23,7 +24,7 @@ body:
       description: What do you expect for the final result?
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: assignee
     attributes:
       label: Assigned to...
