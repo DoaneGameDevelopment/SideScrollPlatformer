@@ -24,11 +24,12 @@ body:
       description: What do you expect for the final result?
     validations:
       required: true
+
   - type: textarea
     id: assignee
     attributes:
       label: Assigned to...
       description: "@mention a person or team"
-      placeholder: "@user"
+      placeholder: "@team (@user - @user)"
     validations:
       required: true
