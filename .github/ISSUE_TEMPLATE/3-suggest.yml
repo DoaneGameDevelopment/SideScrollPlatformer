@@ -1,24 +1,22 @@
-name: Task
-description: Create a task.
+name: Suggestion
+description: Suggest something.
 title: "[Suggestion]: "
 labels: ["suggestion"]
 type: "feature"
 body:
   - type: textarea
-    id: todo-task
+    id: todo-feature
     attributes:
-      label: Todo
-      description: A checklist of things to do
+      label: Outline
+      description: A rough outline on how this would be accomplished.
       value: |
         - [ ] Item 1
         - [ ] Item 2
         - [ ] Item 3
         - [ ] Item 4
-    validations:
-      required: true
 
   - type: textarea
-    id: desc-task
+    id: desc-feature
     attributes:
       label: Expectations
       description: What do you expect for the final result?
@@ -26,10 +24,8 @@ body:
       required: true
 
   - type: textarea
-    id: assignee
+    id: assignee-feature
     attributes:
       label: Assigned to...
       description: "@mention a person or team"
-      placeholder: "@team (@user - @user)"
-    validations:
-      required: true
+      placeholder: "@everyone; @team"
