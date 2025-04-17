@@ -22,7 +22,10 @@ public class GameManager : MonoBehaviour
     {
         timeTaken = 0f;
         PlayerPrefs.SetFloat("timeTaken", 0f); // reset time wasted
-        timeTakenText.text = "Time: \n" + timeTaken.ToString();
+
+        
+        // TODO : Uncomment and make UI
+        //timeTakenText.text = "Time: \n" + timeTaken.ToString();
     }
     
 
@@ -43,7 +46,10 @@ public class GameManager : MonoBehaviour
         int mins = Mathf.FloorToInt(timeTaken / 60);
         int secs = Mathf.FloorToInt(timeTaken % 60);
 
+
         // render and display UI elements
-        timeTakenText.text = string.Format("Time: \n{0:00}:{1:00}", mins, secs);
+        
+        // TODO : Uncomment and make UI
+        // timeTakenText.text = string.Format("Time: \n{0:00}:{1:00}", mins, secs); // commented out due to errors (UI hasn't been made yet)
     }
 }
