@@ -3,38 +3,53 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public Rigidbody2D rigidBody;
-    public float speed;
-    public float verticalSpeed;
-    private float Move;
+    public float speed = 5f;
+    private Camera m_camera;
+    private bool onScreen;
+    private bool hitLeft = false;
+    private bool hitRight = true;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        m_camera = Camera.main;
+        rigidBody.bodyType = RigidbodyType2D.Dynamic;
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-            m_player = GetComponent<Player>();
-            m_camera = FindObjectOfType<Camera>();
-        
-        public void CheckVisibility()
+        Vector3 screenPos = m_camera.WorldToScreenPoint(transform.position);
+        onScreen = true;
+
+        if (onScreen)
         {
-            //Check Visibility
-
-            screenPos = m_camera.WorldToScreenPoint(transform.position);
-            onScreen = screenPos.x > 0f && screenPos.x < Screen.width && screenPos.y > 0f && screenPos.y < Screen.height;
-
-            if (onScreen && m_player.isVisible)
+            if (hitRight)
             {
-        
-
-
-
-
+                rigidBody.linearVelocity = new Vector2(-speed, rigidBody.linearVelocity.y);
             }
-            
+            else if (hitLeft)
+            {
+                rigidBody.linearVelocity = new Vector2(speed, rigidBody.linearVelocity.y);
+            }
         }
-     }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            // Flip direction on collision
+            if (hitRight)
+            {
+                hitRight = false;
+                hitLeft = true;
+                Debug.Log("cool");
+            }
+            else
+            {
+                hitRight = true;
+                hitLeft = false;
+            }
+        }
+    }
 }
