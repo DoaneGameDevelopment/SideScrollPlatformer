@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     
-public Text timeTakenText;
+    public Text timeTakenText;
     float timeTaken = 0f;
 
     public static GameManager instance; // what this do
