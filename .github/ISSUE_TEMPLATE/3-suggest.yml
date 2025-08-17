@@ -1,0 +1,31 @@
+name: Suggestion
+description: Suggest something.
+title: "[Suggestion]: "
+labels: ["suggestion"]
+type: "feature"
+body:
+  - type: textarea
+    id: todo-feature
+    attributes:
+      label: Outline
+      description: A rough outline on how this would be accomplished.
+      value: |
+        - [ ] Item 1
+        - [ ] Item 2
+        - [ ] Item 3
+        - [ ] Item 4
+
+  - type: textarea
+    id: desc-feature
+    attributes:
+      label: Expectations
+      description: What do you expect for the final result?
+    validations:
+      required: true
+
+  - type: textarea
+    id: assignee-feature
+    attributes:
+      label: Assigned to...
+      description: "@mention a person or team"
+      placeholder: "@everyone; @team"
