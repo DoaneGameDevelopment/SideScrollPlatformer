@@ -1,8 +1,10 @@
+using System;
+using System.Numerics;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public GameObject player;
     public Rigidbody2D rigidBody;
     public float speed;
     public float verticalSpeed; // i'm not gonna touch it but i don't think this does anything rn
@@ -34,7 +36,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Move = Input.GetAxis("Horizontal");
-        rigidBody.linearVelocity = new Vector2(Move * speed, rigidBody.linearVelocityY);
-        
+        rigidBody.linearVelocity = new UnityEngine.Vector3(Move * speed, rigidBody.linearVelocityY);
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            player.transform.localScale += new UnityEngine.Vector3(0f, -1f, 0f);
+            player.transform.position += new UnityEngine.Vector3(0f, -0.5f, 0f);
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            player.transform.localScale += new UnityEngine.Vector3(0f, 1f, 0f);
+            player.transform.position += new UnityEngine.Vector3(0f, 0.5f, 0f);
+        }
     }
 }
