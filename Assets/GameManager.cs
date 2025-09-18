@@ -49,7 +49,21 @@ public class GameManager : MonoBehaviour
 
 
         // render and display UI elements
-        
+        bool Game_Paused = false;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Game_Paused)
+            {
+                Time.timeScale = 1;
+                Game_Paused = false;
+            }
+            else
+            {
+                Time.timeScale = 0;
+                Game_Paused = true;
+            }
+        }
+
         // TODO : Uncomment and make UI
         // timeTakenText.text = string.Format("Time: \n{0:00}:{1:00}", mins, secs); // commented out due to errors (UI hasn't been made yet)
     }
