@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rigidBody.freezeRotation = true; // no more rotate
     }
 
     // Update is called once per frame
@@ -49,7 +49,5 @@ public class PlayerMovement : MonoBehaviour
             player.transform.localScale += new UnityEngine.Vector3(0f, 1f, 0f);
             player.transform.position += new UnityEngine.Vector3(0f, 0.5f, 0f);
         }
-
-        rigidBody.freezeRotation = true; // no more rotate
     }
 }
