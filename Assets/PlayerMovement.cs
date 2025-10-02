@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rigidBody.freezeRotation = true; // no more rotate
     }
 
     // Update is called once per frame
@@ -25,12 +25,14 @@ public class PlayerMovement : MonoBehaviour
             rigidBody.linearVelocityY += 5;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift)) { // sprint just multiplies current speed by two
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        { // sprint just multiplies current speed by two
             speed = 2; // need to adjust speed as needed i think
             rigidBody.linearVelocityX *= speed; // i don't know if this needs to change to fix it
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift)) { // basically to check when you're not sprinting
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        { // basically to check when you're not sprinting
             speed = 1;
             rigidBody.linearVelocityX *= speed;
         }
