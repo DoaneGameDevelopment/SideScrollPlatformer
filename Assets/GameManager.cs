@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         timeTaken = 0f;
         PlayerPrefs.SetFloat("timeTaken", 0f); // reset time wasted
+        Game_Paused = false;
 
         
         // TODO : Uncomment and make UI
@@ -49,22 +50,35 @@ public class GameManager : MonoBehaviour
 
 
         // render and display UI elements
-        bool Game_Paused = false;
+
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (Game_Paused)
             {
-                Time.timeScale = 1;
-                Game_Paused = false;
+                ResumeGame();
             }
             else
             {
-                Time.timeScale = 0;
-                Game_Paused = true;
+                PauseGame();
             }
         }
 
         // TODO : Uncomment and make UI
         // timeTakenText.text = string.Format("Time: \n{0:00}:{1:00}", mins, secs); // commented out due to errors (UI hasn't been made yet)
+    }
+
+    public bool Game_Paused = false;
+    
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        Game_Paused = true;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        Game_Paused = false;
     }
 }
