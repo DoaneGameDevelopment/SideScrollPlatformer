@@ -13,6 +13,5 @@ public class PlayerCamera : MonoBehaviour
         smoothPosition = Vector3.Lerp(this.transform.position, new Vector3(player.position.x, player.position.y, this.transform.position.z), speed);
         this.transform.position = smoothPosition;
         Vector3 mouse = Input.mousePosition;
-        Debug.Log(mouse);
     }
 }
