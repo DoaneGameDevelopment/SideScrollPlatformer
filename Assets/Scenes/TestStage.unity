@@ -790,7 +790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5137406629991847336, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
       propertyPath: m_Name
-      value: FloorBlock2x1
+      value: Float_Plat
       objectReference: {fileID: 0}
     - target: {fileID: 5137406629991847336, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
       propertyPath: m_TagString
@@ -799,7 +799,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5137406629991847336, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1367589248}
   m_SourcePrefab: {fileID: 100100000, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
 --- !u!1001 &1211089461
 PrefabInstance:
@@ -1106,6 +1109,23 @@ Transform:
   - {fileID: 1609177909}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1367589246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5137406629991847336, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
+  m_PrefabInstance: {fileID: 1107493695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1367589248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367589246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc03b9f2dd2b7314982603d198e1a1e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1458502004
 PrefabInstance:
   m_ObjectHideFlags: 0
