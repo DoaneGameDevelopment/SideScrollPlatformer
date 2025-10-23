@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 1322153456}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1669,5 +1669,4 @@ SceneRoots:
   - {fileID: 552505806}
   - {fileID: 1735366273}
   - {fileID: 1232490891}
-  - {fileID: 1107493695}
   - {fileID: 1942230762}
