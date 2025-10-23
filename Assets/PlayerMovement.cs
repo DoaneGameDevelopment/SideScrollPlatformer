@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rigidBody.freezeRotation = true; // no more rotate
     }
 
     // Update is called once per frame
