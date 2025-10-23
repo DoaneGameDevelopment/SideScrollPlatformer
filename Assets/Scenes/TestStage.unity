@@ -569,6 +569,8 @@ GameObject:
   - component: {fileID: 926243968}
   - component: {fileID: 926243969}
   - component: {fileID: 1072209609}
+  - component: {fileID: 1072209610}
+  - component: {fileID: 1072209611}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -884,7 +886,6 @@ GameObject:
   - component: {fileID: 1232490888}
   - component: {fileID: 1232490887}
   - component: {fileID: 1232490886}
-  - component: {fileID: 1232490885}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -892,18 +893,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1232490885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232490884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d2b5049ce53b4349a8835f19a76b3b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1232490886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,5 +1751,4 @@ SceneRoots:
   - {fileID: 552505806}
   - {fileID: 1735366273}
   - {fileID: 1232490891}
-  - {fileID: 1107493695}
   - {fileID: 1942230762}
