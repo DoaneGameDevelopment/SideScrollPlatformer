@@ -1,6 +1,7 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -9,8 +10,8 @@ public class GameManager : MonoBehaviour
     public Text timeTakenText;
     float timeTaken = 0f;
 
-    public static GameManager instance; // what this do
-    void Awake() // what this do, is this the same thing as Start and OnEnable?
+    public static GameManager instance; // i think this is basically a constructor
+    void Awake() // this literally just initializes instances/variables that are important before Start
     {
         if (instance == null)
         {
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
         timeTaken = 0f;
         PlayerPrefs.SetFloat("timeTaken", 0f); // reset time wasted
         Game_Paused = false;
-
+        Pause_Menu.SetActive(false);
         
         // TODO : Uncomment and make UI
         //timeTakenText.text = "Time: \n" + timeTaken.ToString();
@@ -65,20 +66,39 @@ public class GameManager : MonoBehaviour
         }
 
         // TODO : Uncomment and make UI
+
         // timeTakenText.text = string.Format("Time: \n{0:00}:{1:00}", mins, secs); // commented out due to errors (UI hasn't been made yet)
     }
 
     public bool Game_Paused = false;
+    public GameObject Pause_Menu;
     
     public void PauseGame()
     {
         Time.timeScale = 0;
         Game_Paused = true;
+        Pause_Menu.SetActive(true);
     }
 
-    public void ResumeGame()
+    public void ResumeGame()    
     {
         Time.timeScale = 1;
         Game_Paused = false;
+        Pause_Menu.SetActive(false);
+    }
+
+    public void ReturnToTitle()
+    {
+        Time.timeScale = 1;
+        Game_Paused = false;
+        Pause_Menu.SetActive(false);
+        SceneManager.LoadScene(0);
+    }
+    public void Options()
+    {
+        Time.timeScale = 1;
+        Game_Paused = false;
+        Pause_Menu.SetActive(false);
+        SceneManager.LoadScene(2);
     }
 }
