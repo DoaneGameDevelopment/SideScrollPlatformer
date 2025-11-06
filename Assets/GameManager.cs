@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     
     public Text timeTakenText;
     float timeTaken = 0f;
+    public float timer = 300f;
 
     public static GameManager instance; // what this do
     void Awake() // what this do, is this the same thing as Start and OnEnable?
@@ -47,6 +48,8 @@ public class GameManager : MonoBehaviour
         timeTaken += Time.deltaTime;
         int mins = Mathf.FloorToInt(timeTaken / 60);
         int secs = Mathf.FloorToInt(timeTaken % 60);
+        timer -= Time.deltaTime;
+       
 
 
         // render and display UI elements
@@ -82,3 +85,4 @@ public class GameManager : MonoBehaviour
         Game_Paused = false;
     }
 }
+
