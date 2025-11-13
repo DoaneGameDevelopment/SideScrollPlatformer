@@ -3,10 +3,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
     
-    public Text timeTakenText;
+    public Text timeDisplay;
     float timeTaken = 0f;
     public float timer = 300f;
 
@@ -68,8 +69,11 @@ public class GameManager : MonoBehaviour
         }
 
         // TODO : Uncomment and make UI
-        // timeTakenText.text = string.Format("Time: \n{0:00}:{1:00}", mins, secs); // commented out due to errors (UI hasn't been made yet)
+      
+      // timeTakenText.text = string.Format("Time: \n{0:00}:{1:00}", mins, secs); // commented out due to errors (UI hasn't been made yet)
+      timeDisplay.text = string.Format("{0:00}", timer);
     }
+
 
     public bool Game_Paused = false;
     
