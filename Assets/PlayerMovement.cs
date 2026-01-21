@@ -9,17 +9,20 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float verticalSpeed; // i'm not gonna touch it but i don't think this does anything rn
     private bool isGrounded = true;
+    private bool isGrounded = true;
     private float Move;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rigidBody.freezeRotation = true; // no more rotate
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded) // jump (still needs bool to stop infinite jump)
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) // jump (still needs bool to stop infinite jump)
         {

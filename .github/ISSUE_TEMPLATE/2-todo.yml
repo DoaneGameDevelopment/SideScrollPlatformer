@@ -5,6 +5,14 @@ labels: ["task"]
 type: "task"
 body:
   - type: textarea
+    id: desc-task
+    attributes:
+      label: Expectations
+      description: What do you expect for the final result?
+    validations:
+      required: true
+
+  - type: textarea
     id: todo-task
     attributes:
       label: Todo
@@ -18,18 +26,10 @@ body:
       required: true
 
   - type: textarea
-    id: desc-task
-    attributes:
-      label: Expectations
-      description: What do you expect for the final result?
-    validations:
-      required: true
-
-  - type: textarea
     id: assignee
     attributes:
       label: Assigned to...
       description: "@mention a person or team"
       placeholder: "@team (@user - @user)"
     validations:
-      required: true
+      required: false
