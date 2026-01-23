@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     
     public Text timeTakenText;
     float timeTaken = 0f;
+    public float timer = 300f;
 
     public static GameManager instance; // i think this is basically a constructor
     void Awake() // this literally just initializes instances/variables that are important before Start
@@ -48,6 +49,8 @@ public class GameManager : MonoBehaviour
         timeTaken += Time.deltaTime;
         int mins = Mathf.FloorToInt(timeTaken / 60);
         int secs = Mathf.FloorToInt(timeTaken % 60);
+        timer -= Time.deltaTime;
+       
 
 
         // render and display UI elements
@@ -102,3 +105,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 }
+
