@@ -527,7 +527,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTakenText: {fileID: 0}
+<<<<<<< HEAD
   Pause_Menu: {fileID: 1500205986}
+=======
+>>>>>>> e5f1a4b (Updated timer (#42))
   timer: 300
   Game_Paused: 0
 --- !u!4 &552505806

@@ -62,9 +62,12 @@ MonoBehaviour:
       - rid: 7449567097520132
       - rid: 7449567097520133
       - rid: 7449567097520134
+<<<<<<< HEAD
       - rid: 3515985821337649231
       - rid: 3515985821337649232
       - rid: 3515985821337649233
+=======
+>>>>>>> e5f1a4b (Updated timer (#42))
     m_RuntimeSettings:
       m_List: []
   m_AssetVersion: 9
@@ -213,6 +216,7 @@ MonoBehaviour:
       data:
         m_Version: 1
         m_UseBicubicLightmapSampling: 0
+<<<<<<< HEAD
     - rid: 3515985821337649231
       type: {class: RayTracingRenderPipelineResources, ns: UnityEngine.Rendering.UnifiedRayTracing, asm: Unity.UnifiedRayTracing.Runtime}
       data:
@@ -236,6 +240,8 @@ MonoBehaviour:
       data:
         version: 1
         useReflectionProbeRotation: 0
+=======
+>>>>>>> e5f1a4b (Updated timer (#42))
     - rid: 7752762179098771456
       type: {class: UniversalRenderPipelineRuntimeTextures, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:

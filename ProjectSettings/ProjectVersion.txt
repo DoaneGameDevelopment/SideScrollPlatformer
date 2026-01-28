@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 m_EditorVersion: 6000.0.66f1
 m_EditorVersionWithRevision: 6000.0.66f1 (e7adf66625be)
+=======
+m_EditorVersion: 6000.2.8f1
+m_EditorVersionWithRevision: 6000.2.8f1 (c9992ac36c34)
+>>>>>>> e5f1a4b (Updated timer (#42))
