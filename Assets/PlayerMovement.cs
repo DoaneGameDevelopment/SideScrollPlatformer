@@ -61,5 +61,9 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
+        if (collision2D.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("enemy hit");
+        }
     }
 }

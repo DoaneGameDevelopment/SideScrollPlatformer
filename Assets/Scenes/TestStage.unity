@@ -527,9 +527,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTakenText: {fileID: 0}
-  Pause_Menu: {fileID: 1500205986}
   timer: 300
   Game_Paused: 0
+  Pause_Menu: {fileID: 1500205986}
 --- !u!4 &552505806
 Transform:
   m_ObjectHideFlags: 0
@@ -914,6 +914,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &926243966
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -959,6 +960,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.990566, g: 0.45660248, b: 0.1448469, a: 1}
   m_FlipX: 0
@@ -968,7 +970,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &926243967
 Transform:
@@ -1220,7 +1221,6 @@ GameObject:
   - component: {fileID: 1232490890}
   - component: {fileID: 1232490889}
   - component: {fileID: 1232490888}
-  - component: {fileID: 1232490887}
   - component: {fileID: 1232490886}
   m_Layer: 0
   m_Name: Enemy
@@ -1243,18 +1243,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 1232490889}
   speed: 5
---- !u!114 &1232490887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232490884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1232490888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1330,6 +1318,7 @@ Rigidbody2D:
   m_Constraints: 0
 --- !u!212 &1232490890
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1375,6 +1364,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.99215686, g: 0.14509805, b: 0.2400591, a: 1}
   m_FlipX: 0
@@ -1384,7 +1374,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1232490891
 Transform:
