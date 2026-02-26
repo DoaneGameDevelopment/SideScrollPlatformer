@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision2D.gameObject.CompareTag("MovingPlatform"))
         {
             Debug.Log("Hit platform");
-            if(collision2D.transform.position.y >= player.transform.position.y + .5  && isGrounded)
+            if(collision2D.transform.position.y >= player.transform.position.y + 1.3333333  && isGrounded)
             {
                 Debug.Log("Death by squish.");
             }
