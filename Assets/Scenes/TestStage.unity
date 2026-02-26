@@ -1085,11 +1085,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 138933051247660015, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
       propertyPath: m_TagString
-      value: Wall
+      value: MovingPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 2021563824583959488, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348062425369926546, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
+      propertyPath: m_TagString
+      value: MovingPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 3959952776517487889, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1137,7 +1141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5137406629991847336, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
       propertyPath: m_TagString
-      value: Wall
+      value: MovingPlatform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -7,6 +7,7 @@ TagManager:
   - Floor
   - Enemy
   - Wall
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

@@ -63,7 +63,16 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision2D.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("enemy hit");
+            Debug.Log("You Died");
+        }
+        if (collision2D.gameObject.CompareTag("MovingPlatform"))
+        {
+            Debug.Log("Hit platform");
+            if(collision2D.transform.position.y >= player.transform.position.y + .5  && isGrounded)
+            {
+                Debug.Log("Death by squish.");
+            }
+
         }
     }
 }
