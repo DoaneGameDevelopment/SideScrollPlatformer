@@ -29,13 +29,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         { // sprint just multiplies current speed by two
-            speed = 2; // need to adjust speed as needed i think
+            speed = 8; // need to adjust speed as needed i think
             rigidBody.linearVelocityX *= speed; // i don't know if this needs to change to fix it
         }
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         { // basically to check when you're not sprinting
-            speed = 1;
+            speed = 4;
             rigidBody.linearVelocityX *= speed;
         }
 
