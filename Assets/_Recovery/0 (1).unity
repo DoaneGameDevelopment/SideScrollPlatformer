@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDisplay: {fileID: 1825483465}
-  timer: 300
+  timer: 40
   Game_Paused: 1
 --- !u!4 &552505806
 Transform:

@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     
 
     void OnDisable() // save file
-    {
+{
         PlayerPrefs.SetFloat("timeTaken", timeTaken);
     }
 
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         timeTaken = PlayerPrefs.GetFloat("timeTaken");
 
     }
+
     void Update()
     {
         // calculating what to display on the timer
@@ -50,11 +51,25 @@ public class GameManager : MonoBehaviour
         int mins = Mathf.FloorToInt(timeTaken / 60);
         int secs = Mathf.FloorToInt(timeTaken % 60);
         timer -= Time.deltaTime;
+
+        if (timer <= 15f)
+        {
+            timeDisplay.color = Color.red;
+        }
+        else if (timer <= 20f)
+        {
+            timeDisplay.color = Color.orange;
+        }
+        else if (timer <= 30f)
+        {
+            timeDisplay.color = Color.yellow;
+        }
+        else if (timer <= 35f)
+        {
+            timeDisplay.color = Color.chartreuse;
+        }
        
-
-
-        // render and display UI elements
-
+       // render and display UI elements
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
