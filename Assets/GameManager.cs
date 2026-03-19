@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
     public Text timeDisplay;
     float timeTaken = 0f;
     public float timer = 300f;
@@ -27,9 +26,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("timeTaken", 0f); // reset time wasted
         Game_Paused = false;
         Pause_Menu.SetActive(false);
-        
-        // TODO : Uncomment and make UI
-        //timeTakenText.text = "Time: \n" + timeTaken.ToString();
     }
     
 
@@ -67,10 +63,8 @@ public class GameManager : MonoBehaviour
         {
             timeDisplay.color = Color.chartreuse;
         }
-       
 
-
-        // render and display UI elements
+        timeDisplay.text = string.Format("{0:00}", timer);
 
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -85,8 +79,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // TODO : Uncomment and make UI
-        // timeTakenText.text = string.Format("Time: \n{0:00}:{1:00}", mins, secs); // commented out due to errors (UI hasn't been made yet)
     }
 
     public bool Game_Paused = false;
