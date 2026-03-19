@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) // jump (still needs bool to stop infinite jump)
         {
-            rigidBody.linearVelocity = new UnityEngine.Vector2(rigidBody.linearVelocity.x, 5f);
+            rigidBody.linearVelocityY += 10;
             isGrounded = false;
         }
 
@@ -45,13 +45,11 @@ public class PlayerMovement : MonoBehaviour
         {
             player.transform.localScale += new UnityEngine.Vector3(0f, -1f, 0f);
             player.transform.position += new UnityEngine.Vector3(0f, -0.5f, 0f);
-            speed = 2;
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
             player.transform.localScale += new UnityEngine.Vector3(0f, 1f, 0f);
             player.transform.position += new UnityEngine.Vector3(0f, 0.5f, 0f);
-            speed = 4;
         }
     }
     
