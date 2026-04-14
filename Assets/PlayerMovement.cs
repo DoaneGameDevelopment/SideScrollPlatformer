@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) // jump (still needs bool to stop infinite jump)
         {
-            rigidBody.linearVelocityY += 5;
+            rigidBody.linearVelocityY += 7;
             isGrounded = false;
         }
 
