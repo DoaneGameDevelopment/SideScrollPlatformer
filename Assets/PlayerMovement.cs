@@ -23,8 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) // jump (still needs bool to stop infinite jump)
         {
-            rigidBody.linearVelocityY += 10;
-            isGrounded = false;
+            rigidBody.linearVelocity = new UnityEngine.Vector2(rigidBody.linearVelocity.x, 10f);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -45,19 +44,41 @@ public class PlayerMovement : MonoBehaviour
         {
             player.transform.localScale += new UnityEngine.Vector3(0f, -1f, 0f);
             player.transform.position += new UnityEngine.Vector3(0f, -0.5f, 0f);
+            speed = 2;
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
             player.transform.localScale += new UnityEngine.Vector3(0f, 1f, 0f);
             player.transform.position += new UnityEngine.Vector3(0f, 0.5f, 0f);
+            speed = 4;
         }
     }
     
     void OnCollisionEnter2D(Collision2D collision2D)
     {
-        if (collision2D.gameObject.CompareTag("Floor"))
+        if (collision2D.transform.position.y <= player.transform.position.y - 1.3333333)
         {
             isGrounded = true;
+            Debug.Log("isGrounded = True");
+        }
+        if (collision2D.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("You Died");
+        }
+        
+        if(collision2D.transform.position.y >= player.transform.position.y + 1.3333333  && isGrounded)
+        {
+            Debug.Log("Death by squish.");
+        }
+
+
+    }
+    void OnCollisionExit2D(Collision2D collision2D)
+    {
+        if (collision2D.transform.position.y <= player.transform.position.y - 1.3333333)
+        {
+            isGrounded = false;
+            Debug.Log("Left Ground");
         }
     }
 }
