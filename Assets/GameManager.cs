@@ -6,13 +6,12 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
-    public Text timeTakenText;
+    public Text timeDisplay;
     float timeTaken = 0f;
     public float timer = 300f;
 
-    public static GameManager instance; // i think this is basically a constructor
-    void Awake() // this literally just initializes instances/variables that are important before Start
+    public static GameManager instance; // what this do
+    void Awake() // what this do, is this the same thing as Start and OnEnable?
     {
         if (instance == null)
         {
@@ -27,9 +26,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("timeTaken", 0f); // reset time wasted
         Game_Paused = false;
         Pause_Menu.SetActive(false);
-        
-        // TODO : Uncomment and make UI
-        //timeTakenText.text = "Time: \n" + timeTaken.ToString();
     }
     
 
@@ -50,10 +46,25 @@ public class GameManager : MonoBehaviour
         int mins = Mathf.FloorToInt(timeTaken / 60);
         int secs = Mathf.FloorToInt(timeTaken % 60);
         timer -= Time.deltaTime;
-       
 
+        if (timer <= 15f)
+        {
+            timeDisplay.color = Color.red;
+        }
+        else if (timer <= 20f)
+        {
+            timeDisplay.color = Color.orange;
+        }
+        else if (timer <= 30f)
+        {
+            timeDisplay.color = Color.yellow;
+        }
+        else if (timer <= 35f)
+        {
+            timeDisplay.color = Color.chartreuse;
+        }
 
-        // render and display UI elements
+        timeDisplay.text = string.Format("{0:00}", timer);
 
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -68,9 +79,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // TODO : Uncomment and make UI
-
-        // timeTakenText.text = string.Format("Time: \n{0:00}:{1:00}", mins, secs); // commented out due to errors (UI hasn't been made yet)
     }
 
     public bool Game_Paused = false;
@@ -83,7 +91,7 @@ public class GameManager : MonoBehaviour
         Pause_Menu.SetActive(true);
     }
 
-    public void ResumeGame()    
+    public void ResumeGame()
     {
         Time.timeScale = 1;
         Game_Paused = false;
