@@ -1,12 +1,12 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
-    public Text timeTakenText;
+    public Text timeDisplay;
     float timeTaken = 0f;
     public float timer = 300f;
 
@@ -25,10 +25,7 @@ public class GameManager : MonoBehaviour
         timeTaken = 0f;
         PlayerPrefs.SetFloat("timeTaken", 0f); // reset time wasted
         Game_Paused = false;
-
-        
-        // TODO : Uncomment and make UI
-        //timeTakenText.text = "Time: \n" + timeTaken.ToString();
+        Pause_Menu.SetActive(false);
     }
     
 
@@ -49,10 +46,25 @@ public class GameManager : MonoBehaviour
         int mins = Mathf.FloorToInt(timeTaken / 60);
         int secs = Mathf.FloorToInt(timeTaken % 60);
         timer -= Time.deltaTime;
-       
 
+        if (timer <= 15f)
+        {
+            timeDisplay.color = Color.red;
+        }
+        else if (timer <= 20f)
+        {
+            timeDisplay.color = Color.orange;
+        }
+        else if (timer <= 30f)
+        {
+            timeDisplay.color = Color.yellow;
+        }
+        else if (timer <= 35f)
+        {
+            timeDisplay.color = Color.chartreuse;
+        }
 
-        // render and display UI elements
+        timeDisplay.text = string.Format("{0:00}", timer);
 
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -67,22 +79,38 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // TODO : Uncomment and make UI
-        // timeTakenText.text = string.Format("Time: \n{0:00}:{1:00}", mins, secs); // commented out due to errors (UI hasn't been made yet)
     }
 
     public bool Game_Paused = false;
+    public GameObject Pause_Menu;
     
     public void PauseGame()
     {
         Time.timeScale = 0;
         Game_Paused = true;
+        Pause_Menu.SetActive(true);
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
         Game_Paused = false;
+        Pause_Menu.SetActive(false);
+    }
+
+    public void ReturnToTitle()
+    {
+        Time.timeScale = 1;
+        Game_Paused = false;
+        Pause_Menu.SetActive(false);
+        SceneManager.LoadScene(0);
+    }
+    public void Options()
+    {
+        Time.timeScale = 1;
+        Game_Paused = false;
+        Pause_Menu.SetActive(false);
+        SceneManager.LoadScene(2);
     }
 }
 

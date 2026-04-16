@@ -24,12 +24,3 @@ body:
         - [ ] Item 4
     validations:
       required: true
-
-  - type: textarea
-    id: assignee
-    attributes:
-      label: Assigned to...
-      description: "@mention a person or team"
-      placeholder: "@team (@user - @user)"
-    validations:
-      required: false

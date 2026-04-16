@@ -51,5 +51,10 @@ public class EnemyMovement : MonoBehaviour
                 hitLeft = false;
             }
         }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("you are die");
+        }
     }
 }
