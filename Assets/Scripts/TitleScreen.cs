@@ -13,4 +13,9 @@ public class TitleScreen : MonoBehaviour
     {
         Application.Quit(); 
     }
+
+    public void ReturnToTitle()
+    {
+        SceneManager.LoadScene(1); // Title Screen is idx 1
+    }
 }
