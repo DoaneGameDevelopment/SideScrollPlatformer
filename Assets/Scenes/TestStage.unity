@@ -647,6 +647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 926243967}
   speed: 0.12
+  lower_y_limit: 0
 --- !u!4 &525762580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2588770855001931969, guid: 9135bb8d18f9141f7bd3b68a6c2de18c, type: 3}
