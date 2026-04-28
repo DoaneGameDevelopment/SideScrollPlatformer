@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             timeDisplay.color = Color.chartreuse;
         }
 
-        //timeDisplay.text = string.Format("{0:00}", timer);
+        timeDisplay.text = string.Format("{0:00}", timer);
 
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -103,14 +103,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         Game_Paused = false;
         Pause_Menu.SetActive(false);
-        SceneManager.LoadScene(0);
-    }
-    public void Options()
-    {
-        Time.timeScale = 1;
-        Game_Paused = false;
-        Pause_Menu.SetActive(false);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }
 
