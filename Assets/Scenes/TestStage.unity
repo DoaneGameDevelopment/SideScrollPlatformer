@@ -648,6 +648,7 @@ MonoBehaviour:
   player: {fileID: 926243967}
   speed: 0.12
   lower_y_limit: 0
+  lower_x_limit: 0.5
 --- !u!4 &525762580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2588770855001931969, guid: 9135bb8d18f9141f7bd3b68a6c2de18c, type: 3}
@@ -1577,6 +1578,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1322153456}
     m_Modifications:
+    - target: {fileID: 138933051247660015, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021563824583959488, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3959952776517487889, guid: 5897153f4ed5dc85dbb02f577efc5388, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.73
@@ -1624,14 +1633,6 @@ PrefabInstance:
     - target: {fileID: 5137406629991847336, guid: 5897153f4ed5dc85dbb02f577efc5388, type: 3}
       propertyPath: m_TagString
       value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 138933051247660015, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 2021563824583959488, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4428834056966976445, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
@@ -1855,6 +1856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3199cd4cd0c6e4d4b85495aa192a7a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy1: {fileID: 1232490884}
   rigidBody: {fileID: 1232490889}
   speed: 5
 --- !u!114 &1232490887
@@ -2573,6 +2575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3199cd4cd0c6e4d4b85495aa192a7a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy1: {fileID: 1538900635}
   rigidBody: {fileID: 1538900639}
   speed: 5
 --- !u!114 &1538900637
@@ -2728,7 +2731,7 @@ Transform:
   m_GameObject: {fileID: 1538900635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54, y: 25, z: 0}
+  m_LocalPosition: {x: 16, y: 1.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3421,6 +3424,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7919680185854896532, guid: c954b019baa717d018efe869507a5e80, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1991221003}
+    - targetCorrespondingSourceObject: {fileID: 7919680185854896532, guid: c954b019baa717d018efe869507a5e80, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1991221006}
   m_SourcePrefab: {fileID: 100100000, guid: c954b019baa717d018efe869507a5e80, type: 3}
 --- !u!1 &1991221001 stripped
 GameObject:
@@ -3478,6 +3484,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4290594916486038738, guid: c954b019baa717d018efe869507a5e80, type: 3}
   m_PrefabInstance: {fileID: 1942230762}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1991221006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991221001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc03b9f2dd2b7314982603d198e1a1e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Move_Plat
+  moveDistance: 2
+  speed: 2
+  pauseTime: 70
 --- !u!1001 &1993905154
 PrefabInstance:
   m_ObjectHideFlags: 0
