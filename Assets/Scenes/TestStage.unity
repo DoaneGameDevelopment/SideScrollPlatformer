@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919680185854896532, guid: c954b019baa717d018efe869507a5e80, type: 3}
       propertyPath: m_TagString
-      value: Wall
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 2348062425369926546, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
       propertyPath: m_TagString
@@ -842,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &552505805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,7 +1238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919680185854896532, guid: c954b019baa717d018efe869507a5e80, type: 3}
       propertyPath: m_TagString
-      value: Wall
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 2348062425369926546, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
       propertyPath: m_TagString
@@ -1977,7 +1977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5137406629991847336, guid: 5897153f4ed5dc85dbb02f577efc5388, type: 3}
       propertyPath: m_TagString
-      value: Wall
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4428834056966976445, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
@@ -2201,7 +2201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3199cd4cd0c6e4d4b85495aa192a7a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy1: {fileID: 0}
+  enemy1: {fileID: 1232490884}
   rigidBody: {fileID: 1232490889}
   speed: 5
 --- !u!114 &1232490887
@@ -3040,7 +3040,6 @@ GameObject:
   - component: {fileID: 1538900640}
   - component: {fileID: 1538900639}
   - component: {fileID: 1538900638}
-  - component: {fileID: 1538900637}
   - component: {fileID: 1538900636}
   m_Layer: 0
   m_Name: Enemy (1)
@@ -3061,21 +3060,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3199cd4cd0c6e4d4b85495aa192a7a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy1: {fileID: 0}
+  enemy1: {fileID: 1538900635}
   rigidBody: {fileID: 1538900639}
   speed: 5
---- !u!114 &1538900637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538900635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1538900638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3217,7 +3204,7 @@ Transform:
   m_GameObject: {fileID: 1538900635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54, y: 25, z: 0}
+  m_LocalPosition: {x: 30.8, y: 6.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4153,7 +4140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919680185854896532, guid: c954b019baa717d018efe869507a5e80, type: 3}
       propertyPath: m_TagString
-      value: Wall
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 2348062425369926546, guid: 1b78298deab82d34fbfedc81849403b1, type: 3}
       propertyPath: m_TagString
