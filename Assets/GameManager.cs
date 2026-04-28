@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             timeDisplay.color = Color.chartreuse;
         }
 
-        timeDisplay.text = string.Format("{0:00}", timer);
+        //timeDisplay.text = string.Format("{0:00}", timer);
 
 
         if (Input.GetKeyDown(KeyCode.Escape))

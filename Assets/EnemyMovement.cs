@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public GameObject enemy1;
     public Rigidbody2D rigidBody;
     public float speed = 5f;
     private Camera m_camera;
@@ -37,19 +38,20 @@ public class EnemyMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("Enemy"))
         {
             // Flip direction on collision
-            if (hitRight)
+            if (collision.transform.position.x <= enemy1.transform.position.x - 1.33333)
             {
                 hitRight = false;
                 hitLeft = true;
                 Debug.Log("cool");
             }
-            else
+            if(collision.transform.position.x >= enemy1.transform.position.x + 0.75)
             {
                 hitRight = true;
                 hitLeft = false;
+                Debug.Log("turning back");
             }
         }
 
