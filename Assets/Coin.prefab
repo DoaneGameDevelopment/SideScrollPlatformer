@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7069487870204504952}
   - component: {fileID: 6527765206189345836}
   - component: {fileID: 2943998082387293152}
-  - component: {fileID: 1218544263023705808}
   - component: {fileID: 7296390519822712062}
+  - component: {fileID: 3513034416626896204}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7063022783664636731}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4844666, y: -0.64038086, z: 0}
+  m_LocalPosition: {x: -2.749827, y: 0.80647385, z: 0}
   m_LocalScale: {x: 0.03505001, y: 0.0368462, z: 1.0378324}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -130,19 +130,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.0013623238, y: -0.0005645752}
   m_Radius: 11.224999
---- !u!114 &1218544263023705808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7063022783664636731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bdc9b85bd5f28e4a9fa46bc89386464, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ColletibleCoins
-  points: 10
 --- !u!95 &7296390519822712062
 Animator:
   serializedVersion: 7
@@ -165,3 +152,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3513034416626896204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063022783664636731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f0c412717cc22a698b4aacb1004464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColletibleCoins
+  points: 2
