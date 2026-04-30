@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static int score;
+    public Text scoreText;
     public Text timeDisplay;
     float timeTaken = 0f;
     public float timer = 300f;
@@ -22,6 +24,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score = 0;
+        UpdateScoreUI();
         timeTaken = 0f;
         PlayerPrefs.SetFloat("timeTaken", 0f); // reset time wasted
         Game_Paused = false;
@@ -83,7 +87,19 @@ public class GameManager : MonoBehaviour
 
     public bool Game_Paused = false;
     public GameObject Pause_Menu;
+
+    public void AddPoints(int points)
+    {
+        score += points;
+        UpdateScoreUI();
+    }
     
+    void UpdateScoreUI()
+    {
+        if(scoreText != null)
+        scoreText.text = "Score: " + score;
+    }
+
     public void PauseGame()
     {
         Time.timeScale = 0;
