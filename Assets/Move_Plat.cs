@@ -5,7 +5,7 @@ public class Move_Plat : MonoBehaviour
 {
     public float moveDistance = 2f;  // how far up to move
     public float speed = 2f;         // movement speed
-    public float pauseTime = 70f;     // how long to pause at top/bottom
+    public float pauseTime = 2f;     // how long to pause at top/bottom
 
     private Vector3 startPos;
     private Vector3 topPos;

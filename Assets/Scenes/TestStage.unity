@@ -2129,9 +2129,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5137406629991847336, guid: 5897153f4ed5dc85dbb02f577efc5388, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1367589248}
-    - targetCorrespondingSourceObject: {fileID: 5137406629991847336, guid: 5897153f4ed5dc85dbb02f577efc5388, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1367589250}
   m_SourcePrefab: {fileID: 100100000, guid: 5897153f4ed5dc85dbb02f577efc5388, type: 3}
 --- !u!1001 &1207300199
@@ -2775,21 +2772,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5137406629991847336, guid: 5897153f4ed5dc85dbb02f577efc5388, type: 3}
   m_PrefabInstance: {fileID: 1107493695}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1367589248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367589246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc03b9f2dd2b7314982603d198e1a1e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDistance: 2
-  speed: 2
-  pauseTime: 4
 --- !u!61 &1367589250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4234,7 +4216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Move_Plat
   moveDistance: 2
   speed: 2
-  pauseTime: 70
+  pauseTime: 4
 --- !u!1001 &1993905154
 PrefabInstance:
   m_ObjectHideFlags: 0
