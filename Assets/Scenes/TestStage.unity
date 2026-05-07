@@ -2951,7 +2951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 926243967}
   speed: 0.12
-  lower_y_limit: -3
+  lower_y_limit: 0
   lower_x_limit: 0.5
 --- !u!1001 &521412467
 PrefabInstance:
