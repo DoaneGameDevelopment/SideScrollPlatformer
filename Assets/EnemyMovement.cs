@@ -45,19 +45,16 @@ public class EnemyMovement : MonoBehaviour
             {
                 hitRight = false;
                 hitLeft = true;
-                Debug.Log("cool");
             }
             if(collision.transform.position.x >= enemy1.transform.position.x + 0.75)
             {
                 hitRight = true;
                 hitLeft = false;
-                Debug.Log("turning back");
             }
         }
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("you are die");
             SceneManager.LoadScene(2);
         }
     }
