@@ -41,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("Enemy"))
         {
             // Flip direction on collision
-            if (collision.transform.position.x <= enemy1.transform.position.x - 1.33333)
+            if (collision.transform.position.x <= enemy1.transform.position.x - 0.75)
             {
                 hitRight = false;
                 hitLeft = true;

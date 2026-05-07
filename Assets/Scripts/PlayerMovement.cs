@@ -1,6 +1,7 @@
 using System;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -62,14 +63,11 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
             Debug.Log("isGrounded = True");
         }
-        if (collision2D.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("You Died");
-        }
         
         if(collision2D.transform.position.y >= player.transform.position.y + 1.3333333  && isGrounded)
         {
-            Debug.Log("Death by squish.");
+            SceneManager.LoadScene(2);
+
         }
 
 
