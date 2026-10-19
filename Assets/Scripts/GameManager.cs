@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         Game_Paused = false;
         Pause_Menu.SetActive(false);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
 
